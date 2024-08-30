@@ -42,6 +42,7 @@ const App = () => {
         <SwiperSlide>{data && (
           <div>
             <h3>City:{input}</h3>
+            <p>Data: {data[0].dt_txt}</p>
             <p>Temperature:{data[0].main.temp}</p>
             <p>Weather:{data[0].weather[0].main}</p>
             <p>Description:{data[0].weather[0].description}</p>
@@ -52,6 +53,7 @@ const App = () => {
         <SwiperSlide>{data && (
           <div>
             <h3>City:{input}</h3>
+            <p>Data: {data[1].dt_txt}</p>
             <p>Temperature:{data[1].main.temp}</p>
             <p>Weather:{data[1].weather[0].main}</p>
             <p>Description:{data[1].weather[0].description}</p>
@@ -62,6 +64,7 @@ const App = () => {
         <SwiperSlide>{data && (
           <div>
             <h3>City:{input}</h3>
+            <p>Data: {data[2].dt_txt}</p>
             <p>Temperature:{data[2].main.temp}</p>
             <p>Weather:{data[2].weather[0].main}</p>
             <p>Description:{data[2].weather[0].description}</p>
@@ -72,6 +75,7 @@ const App = () => {
         <SwiperSlide>{data && (
           <div>
             <h3>City:{input}</h3>
+            <p>Data: {data[3].dt_txt}</p>
             <p>Temperature:{data[3].main.temp}</p>
             <p>Weather:{data[3].weather[0].main}</p>
             <p>Description:{data[3].weather[0].description}</p>
