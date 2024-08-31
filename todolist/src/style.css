@@ -51,5 +51,14 @@ body{
     padding: 10px 20px;
     margin-bottom: 2px;
     color: #fff;
-
+}
+.todoItem p {
+    cursor: pointer;
+}
+.todoItem .complete{
+    text-decoration: line-through;
+}
+.deleteBtn{
+   background-color: transparent;
+   border: none;
 }

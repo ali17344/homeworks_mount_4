@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Form = ({todo, setTodo}) => {
+export const Form = ({todo, setTodo }) => {
     const [text, setText] = useState();
     const btn = document.querySelector('button')
     const input = document.querySelector('input')

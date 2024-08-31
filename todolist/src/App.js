@@ -4,10 +4,22 @@ import './style.css';
 
 function App() {
   const [todo, setTodo] = useState([]);
+  const deleteTodo = (id) =>{
+    setTodo(todo.filter((item) => item.id !== id))
+  }
+  const completeTodo = (id) => {
+    setTodo(todo.map((item) => item.id === id ? {...item, complete: !item.complete} : item))
+  }
+  const editTodo = ( id) => {
+    setTodo(todo.map((item) => item.id === id ? {...item, isEdit: !item.isEdit} : item))
+  }
+  const changeText = (text,id) => {
+    setTodo(todo.map((item) => item.id === id ? {...item,text:text, isEdit: !item.isEdit} : item))
+  }
   return (
     <div className="container">
       <Form todo={todo} setTodo={setTodo} />
-      <TodoList todo={todo} />
+      <TodoList todo={todo} deleteTodo={deleteTodo} completeTodo ={completeTodo} editTodo={editTodo} changeText={changeText}/>
     </div>
   );
 }
