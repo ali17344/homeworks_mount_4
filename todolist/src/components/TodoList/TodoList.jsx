@@ -1,11 +1,11 @@
 import { FaDeleteLeft } from "react-icons/fa6";
 import { LuClipboardEdit } from "react-icons/lu"
 import { EditTodo } from "../EditTodo/EditTodo";
-export const TodoList = ({todo, deleteTodo, completeTodo, editTodo,changeText}) => {
+export const TodoList = ({todo, deleteTodo, completeTodo, editTodo, changeText, searchTodo,searchTerm}) => {
     return (
         <div className="todoCont">
             <h1>Todo List</h1>
-            <input placeholder="search todo's" type="text" />
+            <input type="text" placeholder="What task are you looking for" value={searchTerm} onChange={(e) => searchTodo(e.target.value)} />
             {
                 todo && 
                 todo.map((item) => (
