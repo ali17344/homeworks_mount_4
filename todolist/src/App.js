@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, TodoList } from "./components";
 import './style.css';
 
 function App() {
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState(localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : []);
       const [searchTerm, setSearchTerm] = useState(''); 
 
   const deleteTodo = (id) =>{
@@ -26,7 +26,9 @@ const searchTodo = (text) => {
 const filteredTodos = todo.filter(item => 
   item.text.toLowerCase().includes(searchTerm.toLowerCase())
 );
-
+useEffect(()=>{
+      localStorage.setItem('todo',JSON.stringify(todo))
+},[todo])
   return (
     <div className="container">
       <Form todo={todo} setTodo={setTodo} />

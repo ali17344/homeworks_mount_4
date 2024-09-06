@@ -41,3 +41,10 @@ button:hover{
 h1{
     box-shadow: 2px, 3px, 1px black;
 }
+.numbers{
+    display: flex;
+    margin-top: 5px;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
