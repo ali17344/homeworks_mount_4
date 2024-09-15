@@ -30,7 +30,7 @@ function App() {
       <h1>{time}</h1>
       <h1>{click}</h1>
       <h1>{result}</h1>
-      <button onClick={clicker} className="btn" disabled={time < 0}  >Click</button>
+      <button onClick={clicker} className="btn" disabled={time === 0}  >Click</button>
       </div>
 
     </div>
