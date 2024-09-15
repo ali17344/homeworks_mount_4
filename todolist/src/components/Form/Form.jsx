@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const Form = ({todo, setTodo }) => {
     const [text, setText] = useState();
-    let inp = document.querySelector('input')
+    
     const addTodo = () => {
         if(text.trim()){
             setTodo([
@@ -15,7 +15,7 @@ export const Form = ({todo, setTodo }) => {
             }, ...todo
         ]);
     }
-    setText(inp.value =  '')
+    setText('')
 }
     return (
         <div className="todoCont">
